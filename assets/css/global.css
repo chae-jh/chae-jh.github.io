@@ -90,3 +90,9 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+/* Korea University logo */
+img[src*="/assets/images/badges/KU"] {
+    max-height: 20px;
+    max-width: auto;
+    object-fit: contain;
+}
