@@ -3,7 +3,7 @@ secondary_name: ""
 navbar_name: "Jeongho Chae"
 
 positions:
-- name: incoming Ph.D. Student in Computational Biology (CPCB)
+- name: Incoming Ph.D. Student in Computational Biology (CPCB)
 - name: School of Computer Science, Carnegie Mellon University
   logo: /assets/images/badges/CMU.png  # Logo is optional
 
@@ -22,7 +22,7 @@ orcid: 0009-0005-0049-6274
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am an incoming Ph.D. student in Computational Biology (CPCB) at Carnegie Mellon University, affiliated with the School of Computer Science.
+    Hi! I am an incoming Ph.D. student in Computational Biology (CPCB) at Carnegie Mellon University, affiliated with the School of Computer Science.
     My research is motivated by a central question: how can we extract reliable biological insight from noisy and incomplete data?
   </p>
   <p>
@@ -45,10 +45,10 @@ education:
   position: >- 
     School of Computer Science <br/>
     Ph.D. in Computational Biology
-  date: Aug. 2026 - Present
+  date: Starting Aug. 2026
 - name: Korea University
   logo: /assets/images/badges/KU.png
-  position: B.S. in Life Scinces / Computer Sciences and Engineering
+  position: B.S. in Life Sciences / Computer Science and Engineering
   date: Mar. 2020 - Feb. 2026
 - name: University of North Carolina at Chapel Hill
   logo: /assets/images/badges/UNC.png
@@ -60,6 +60,11 @@ experience:
   logo: /assets/images/badges/UNC.png
   position: Research Assistant - Terry Furey's lab
   date: Jan. 2025 - Present
+
+- name: Republic of Korean Army
+  logo: /assets/images/badges/Army.png
+  position: Medic (Sergeant)
+  data: Oct. 2021 - Mar. 2023 
 
 awards:
 - name: Korea-US Advanced Industry Scholarship Recipient
