@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +17,7 @@
       --bg: #ffffff;
       --text: #111111;
       --muted: #666666;
-      --line: #dddddd;
+      --line: #dedede;
       --max: 1080px;
     }
 
@@ -64,7 +65,7 @@
        ========================= */
 
     header {
-      padding: 30px 0 16px;
+      padding: 30px 0 0;
     }
 
     nav {
@@ -79,6 +80,7 @@
 
     nav a {
       border-bottom: 1px solid transparent;
+
       transition:
         opacity 0.15s ease,
         border-color 0.15s ease;
@@ -94,27 +96,21 @@
        ========================= */
 
     .hero {
-      min-height: 560px;
+      min-height: 670px;
 
       display: flex;
       align-items: center;
 
-      border: 1px solid #e4e4e4;
-      border-radius: 34px;
-
-      margin-top: 18px;
-      margin-bottom: 26px;
-
-      padding: 72px 76px;
+      padding: 95px 0 110px;
     }
 
     .hero-inner {
       width: 100%;
-      max-width: 780px;
+      max-width: 920px;
     }
 
     .hello {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
 
       font-size: 16px;
       line-height: 1.4;
@@ -123,17 +119,19 @@
     .hero h1 {
       margin: 0;
 
-      font-size: clamp(70px, 10vw, 118px);
-      line-height: 0.88;
+      font-size: clamp(72px, 8vw, 108px);
+      line-height: 0.95;
 
       font-weight: 800;
-      letter-spacing: -0.07em;
+      letter-spacing: -0.065em;
+
+      white-space: nowrap;
     }
 
     .hero-role {
-      margin: 30px 0 0;
+      margin-top: 30px;
 
-      font-size: clamp(26px, 3.4vw, 36px);
+      font-size: clamp(27px, 3.3vw, 38px);
       line-height: 1.12;
 
       font-weight: 700;
@@ -141,10 +139,11 @@
     }
 
     .hero-info {
-      margin-top: 28px;
+      margin-top: 30px;
+
       padding-left: 18px;
 
-      border-left: 1px solid #888888;
+      border-left: 1px solid #999999;
     }
 
     .hero-info p {
@@ -153,7 +152,7 @@
       color: var(--muted);
 
       font-size: 18px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .hero-email {
@@ -172,42 +171,36 @@
     }
 
     .hero-extra {
-      margin-top: 28px;
+      margin-top: 30px;
 
       color: #444444;
 
       font-size: 16px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     /* =========================
-       SECTIONS
+       GENERAL SECTIONS
        ========================= */
 
     .content {
-      padding: 28px 0;
+      padding: 86px 0;
+
       border-bottom: 1px solid var(--line);
     }
 
-    .section-grid {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 46px;
-      align-items: start;
-    }
-
     .section-title {
-      margin: 0;
+      margin: 0 0 42px;
 
-      font-size: 26px;
-      line-height: 1.15;
+      font-size: 30px;
+      line-height: 1.1;
 
       font-weight: 800;
       letter-spacing: -0.04em;
     }
 
     .section-body {
-      min-width: 0;
+      max-width: 850px;
     }
 
     /* =========================
@@ -220,7 +213,7 @@
       margin: 0;
 
       font-size: 17px;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* =========================
@@ -230,13 +223,15 @@
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 26px;
+      gap: 30px;
     }
 
     .timeline-row {
       display: grid;
-      grid-template-columns: 165px 1fr;
-      gap: 28px;
+      grid-template-columns: 180px minmax(0, 1fr);
+
+      gap: 36px;
+      align-items: start;
     }
 
     .date {
@@ -257,42 +252,42 @@
     }
 
     .timeline-row p {
-      margin: 4px 0 0;
+      margin: 5px 0 0;
 
       color: #444444;
 
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* =========================
        RESEARCH
        ========================= */
 
-    .research-row {
-      display: grid;
-      grid-template-columns: 120px 1fr auto;
-      gap: 30px;
-      align-items: start;
+    .research-item {
+      max-width: 760px;
     }
 
     .research-number {
       color: var(--muted);
 
       font-size: 14px;
+
+      margin-bottom: 14px;
     }
 
-    .research-main h3 {
+    .research-title {
       margin: 0;
 
-      font-size: 17px;
-      line-height: 1.5;
+      font-size: 22px;
+      line-height: 1.45;
 
-      font-weight: 500;
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
-    .research-main p {
-      margin: 10px 0 0;
+    .research-authors {
+      margin-top: 14px;
 
       color: var(--muted);
 
@@ -301,11 +296,13 @@
     }
 
     .research-links {
+      margin-top: 20px;
+
       display: flex;
       gap: 24px;
-      white-space: nowrap;
 
       font-size: 15px;
+      font-weight: 500;
     }
 
     .research-links a {
@@ -320,24 +317,25 @@
     .award-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 22px;
     }
 
     .award-row {
       display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 28px;
+      grid-template-columns: 180px minmax(0, 1fr);
+
+      gap: 36px;
     }
 
-    .award-row span:first-child {
+    .award-year {
       color: var(--muted);
 
       font-size: 14px;
     }
 
-    .award-row span:last-child {
+    .award-title {
       font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.55;
 
       font-weight: 600;
     }
@@ -364,7 +362,7 @@
        ========================= */
 
     footer {
-      padding: 34px 0 44px;
+      padding: 42px 0 48px;
 
       text-align: center;
 
@@ -380,7 +378,7 @@
     @media (max-width: 760px) {
 
       .container {
-        width: min(calc(100% - 30px), var(--max));
+        width: min(calc(100% - 32px), var(--max));
       }
 
       header {
@@ -389,7 +387,8 @@
 
       nav {
         justify-content: flex-start;
-        gap: 17px;
+
+        gap: 18px;
 
         font-size: 13px;
       }
@@ -397,13 +396,13 @@
       .hero {
         min-height: auto;
 
-        padding: 56px 28px;
-
-        border-radius: 26px;
+        padding: 110px 0 105px;
       }
 
       .hero h1 {
-        font-size: clamp(62px, 20vw, 90px);
+        font-size: clamp(58px, 16vw, 82px);
+
+        white-space: normal;
       }
 
       .hero-role {
@@ -414,32 +413,36 @@
         font-size: 16px;
       }
 
-      .section-grid {
-        grid-template-columns: 1fr;
-        gap: 26px;
+      .hero-extra {
+        font-size: 15px;
+      }
+
+      .content {
+        padding: 72px 0;
+      }
+
+      .section-title {
+        margin-bottom: 34px;
+
+        font-size: 27px;
       }
 
       .timeline-row {
         grid-template-columns: 1fr;
-        gap: 6px;
-      }
 
-      .research-row {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .research-links {
-        margin-top: 4px;
+        gap: 7px;
       }
 
       .award-row {
         grid-template-columns: 1fr;
-        gap: 5px;
+
+        gap: 6px;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -448,7 +451,9 @@
        ========================= -->
 
   <header>
+
     <div class="container">
+
       <nav>
 
         <a href="#about">
@@ -476,12 +481,16 @@
         </a>
 
       </nav>
+
     </div>
+
   </header>
+
 
   <main>
 
     <div class="container">
+
 
       <!-- =========================
            HERO
@@ -495,23 +504,31 @@
             Hello, I'm
           </p>
 
+
           <h1>
-            Jeongho<br>
-            Chae
+            Jeongho Chae
           </h1>
 
+
           <div class="hero-role">
-            Computational Biology &amp;<br>
+
+            Computational Biology &amp;
             Statistical Genomics
+
           </div>
+
 
           <div class="hero-info">
 
             <p>
+
               Ph.D. Student in Computational Biology,<br>
+
               School of Computer Science,
               Carnegie Mellon University
+
             </p>
+
 
             <div class="hero-email">
 
@@ -526,6 +543,7 @@
             </div>
 
           </div>
+
 
           <div class="hero-extra">
 
@@ -542,6 +560,7 @@
 
       </section>
 
+
       <!-- =========================
            ABOUT
            ========================= -->
@@ -551,32 +570,30 @@
         id="about"
       >
 
-        <div class="section-grid">
+        <h2 class="section-title">
+          #About
+        </h2>
 
-          <h2 class="section-title">
-            #About
-          </h2>
 
-          <div class="section-body">
+        <div class="section-body">
 
-            <p class="about-text">
+          <p class="about-text">
 
-              I am interested in developing robust and
-              interpretable computational methods for
-              understanding gene regulation from complex
-              genomic data.
+            I am interested in developing robust and
+            interpretable computational methods for
+            understanding gene regulation from complex
+            genomic data.
 
-              My research interests include statistical genomics,
-              causal inference, gene regulation,
-              and computational method development.
+            My research interests include statistical genomics,
+            causal inference, gene regulation,
+            and computational method development.
 
-            </p>
-
-          </div>
+          </p>
 
         </div>
 
       </section>
+
 
       <!-- =========================
            EDUCATION
@@ -587,86 +604,97 @@
         id="education"
       >
 
-        <div class="section-grid">
+        <h2 class="section-title">
+          #Education
+        </h2>
 
-          <h2 class="section-title">
-            #Education
-          </h2>
 
-          <div class="section-body">
+        <div class="section-body">
 
-            <div class="timeline">
+          <div class="timeline">
 
-              <div class="timeline-row">
 
-                <div class="date">
-                  Aug. 2026 — Present
-                </div>
+            <div class="timeline-row">
 
-                <div>
-
-                  <h3>
-                    Carnegie Mellon University
-                  </h3>
-
-                  <p>
-                    Ph.D. in Computational Biology<br>
-                    School of Computer Science
-                  </p>
-
-                </div>
-
+              <div class="date">
+                Aug. 2026 — Present
               </div>
 
-              <div class="timeline-row">
+              <div>
 
-                <div class="date">
-                  Jan. 2025 — Jul. 2025
-                </div>
+                <h3>
+                  Carnegie Mellon University
+                </h3>
 
-                <div>
+                <p>
 
-                  <h3>
-                    University of North Carolina at Chapel Hill
-                  </h3>
+                  Ph.D. in Computational Biology<br>
 
-                  <p>
-                    Student Exchange Program<br>
-                    Research Assistant, Furey Lab
-                  </p>
+                  School of Computer Science
 
-                </div>
-
-              </div>
-
-              <div class="timeline-row">
-
-                <div class="date">
-                  Mar. 2020 — Feb. 2026
-                </div>
-
-                <div>
-
-                  <h3>
-                    Korea University
-                  </h3>
-
-                  <p>
-                    B.S. in Life Sciences<br>
-                    B.S. in Computer Science and Engineering
-                  </p>
-
-                </div>
+                </p>
 
               </div>
 
             </div>
+
+
+            <div class="timeline-row">
+
+              <div class="date">
+                Jan. 2025 — Jul. 2025
+              </div>
+
+              <div>
+
+                <h3>
+                  University of North Carolina at Chapel Hill
+                </h3>
+
+                <p>
+
+                  Student Exchange Program<br>
+
+                  Research Assistant, Furey Lab
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="timeline-row">
+
+              <div class="date">
+                Mar. 2020 — Feb. 2026
+              </div>
+
+              <div>
+
+                <h3>
+                  Korea University
+                </h3>
+
+                <p>
+
+                  B.S. in Life Sciences<br>
+
+                  B.S. in Computer Science and Engineering
+
+                </p>
+
+              </div>
+
+            </div>
+
 
           </div>
 
         </div>
 
       </section>
+
 
       <!-- =========================
            RESEARCH
@@ -677,65 +705,75 @@
         id="research"
       >
 
-        <div class="section-grid">
+        <h2 class="section-title">
+          #Research
+        </h2>
 
-          <h2 class="section-title">
-            #Research
-          </h2>
 
-          <div class="section-body">
+        <div class="section-body">
 
-            <div class="research-row">
+          <article class="research-item">
 
-              <div class="research-number">
-                01 / WAD
-              </div>
 
-              <div class="research-main">
+            <div class="research-number">
+              01 / WAD
+            </div>
 
-                <h3>
 
-                  A wavelet-based linear programming method
-                  using L1-minimal reconstruction loss
-                  for accessible chromatin data deconvolution.
+            <h3 class="research-title">
 
-                </h3>
+              A wavelet-based linear programming method
+              using L1-minimal reconstruction loss
+              for accessible chromatin data deconvolution.
 
-                <p>
+            </h3>
 
-                  Jeongho Chae,
-                  Benjamin McMichael,
-                  Terrence S. Furey
 
-                </p>
+            <div class="research-authors">
 
-              </div>
-
-              <div class="research-links">
-
-                <a
-                  href="#"
-                  target="_blank"
-                >
-                  Paper ↗
-                </a>
-
-                <a
-                  href="#"
-                  target="_blank"
-                >
-                  Code ↗
-                </a>
-
-              </div>
+              Jeongho Chae,
+              Benjamin McMichael,
+              Terrence S. Furey
 
             </div>
 
-          </div>
+
+            <div class="research-links">
+
+              <!--
+                Replace # with your real paper URL.
+              -->
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Paper ↗
+              </a>
+
+
+              <!--
+                Replace # with your real GitHub URL.
+              -->
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Code ↗
+              </a>
+
+            </div>
+
+
+          </article>
 
         </div>
 
       </section>
+
 
       <!-- =========================
            EXPERIENCE
@@ -746,63 +784,64 @@
         id="experience"
       >
 
-        <div class="section-grid">
+        <h2 class="section-title">
+          #Experience
+        </h2>
 
-          <h2 class="section-title">
-            #Experience
-          </h2>
 
-          <div class="section-body">
+        <div class="section-body">
 
-            <div class="timeline">
+          <div class="timeline">
 
-              <div class="timeline-row">
 
-                <div class="date">
-                  2025
-                </div>
+            <div class="timeline-row">
 
-                <div>
-
-                  <h3>
-                    Research Assistant · Furey Lab
-                  </h3>
-
-                  <p>
-                    University of North Carolina at Chapel Hill
-                  </p>
-
-                </div>
-
+              <div class="date">
+                2025
               </div>
 
-              <div class="timeline-row">
+              <div>
 
-                <div class="date">
-                  Oct. 2021 — Mar. 2023
-                </div>
+                <h3>
+                  Research Assistant · Furey Lab
+                </h3>
 
-                <div>
-
-                  <h3>
-                    Medic · Sergeant
-                  </h3>
-
-                  <p>
-                    Republic of Korea Army
-                  </p>
-
-                </div>
+                <p>
+                  University of North Carolina at Chapel Hill
+                </p>
 
               </div>
 
             </div>
+
+
+            <div class="timeline-row">
+
+              <div class="date">
+                Oct. 2021 — Mar. 2023
+              </div>
+
+              <div>
+
+                <h3>
+                  Medic · Sergeant
+                </h3>
+
+                <p>
+                  Republic of Korea Army
+                </p>
+
+              </div>
+
+            </div>
+
 
           </div>
 
         </div>
 
       </section>
+
 
       <!-- =========================
            AWARDS
@@ -813,47 +852,48 @@
         id="awards"
       >
 
-        <div class="section-grid">
+        <h2 class="section-title">
+          #Awards
+        </h2>
 
-          <h2 class="section-title">
-            #Awards
-          </h2>
 
-          <div class="section-body">
+        <div class="section-body">
 
-            <div class="award-list">
+          <div class="award-list">
 
-              <div class="award-row">
 
-                <span>
-                  2025
-                </span>
+            <div class="award-row">
 
-                <span>
-                  Korea–US Advanced Industry Scholarship Recipient
-                </span>
-
+              <div class="award-year">
+                2025
               </div>
 
-              <div class="award-row">
-
-                <span>
-                  2021
-                </span>
-
-                <span>
-                  1st (1/400), Military Physical Fitness Test
-                </span>
-
+              <div class="award-title">
+                Korea–US Advanced Industry Scholarship Recipient
               </div>
 
             </div>
+
+
+            <div class="award-row">
+
+              <div class="award-year">
+                2021
+              </div>
+
+              <div class="award-title">
+                1st (1/400), Military Physical Fitness Test
+              </div>
+
+            </div>
+
 
           </div>
 
         </div>
 
       </section>
+
 
       <!-- =========================
            CONTACT
@@ -864,29 +904,29 @@
         id="contact"
       >
 
-        <div class="section-grid">
+        <h2 class="section-title">
+          #Let's Talk!
+        </h2>
 
-          <h2 class="section-title">
-            #Let's Talk!
-          </h2>
 
-          <div class="section-body">
+        <div class="section-body">
 
-            <div class="contact-links">
+          <div class="contact-links">
 
-              <a href="mailto:jchae2@cs.cmu.edu">
-                jchae2@cs.cmu.edu
-              </a>
 
-              <a
-                href="https://github.com/chae-jh"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub ↗
-              </a>
+            <a href="mailto:jchae2@cs.cmu.edu">
+              jchae2@cs.cmu.edu
+            </a>
 
-            </div>
+
+            <a
+              href="https://github.com/chae-jh"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+
 
           </div>
 
@@ -894,9 +934,11 @@
 
       </section>
 
+
     </div>
 
   </main>
+
 
   <!-- =========================
        FOOTER
@@ -913,6 +955,7 @@
 
   </footer>
 
+
   <script>
 
     document
@@ -922,5 +965,7 @@
 
   </script>
 
+
 </body>
+
 </html>
