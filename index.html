@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,7 +64,13 @@
        ========================= */
 
     header {
-      padding: 30px 0 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    header .container {
+      width: min(calc(100% - 48px), var(--max));
     }
 
     nav {
@@ -96,17 +101,17 @@
        ========================= */
 
     .hero {
-      min-height: 670px;
+      min-height: calc(100vh - 60px);
 
       display: flex;
       align-items: center;
 
-      padding: 95px 0 110px;
+      padding: 70px 0;
     }
 
     .hero-inner {
       width: 100%;
-      max-width: 920px;
+      max-width: 940px;
     }
 
     .hello {
@@ -184,13 +189,13 @@
        ========================= */
 
     .content {
-      padding: 86px 0;
+      padding: 95px 0;
 
       border-bottom: 1px solid var(--line);
     }
 
     .section-title {
-      margin: 0 0 42px;
+      margin: 0 0 44px;
 
       font-size: 30px;
       line-height: 1.1;
@@ -382,7 +387,8 @@
       }
 
       header {
-        padding-top: 22px;
+        height: auto;
+        padding: 22px 0 0;
       }
 
       nav {
@@ -394,9 +400,9 @@
       }
 
       .hero {
-        min-height: auto;
+        min-height: calc(100svh - 60px);
 
-        padding: 110px 0 105px;
+        padding: 60px 0;
       }
 
       .hero h1 {
@@ -418,7 +424,7 @@
       }
 
       .content {
-        padding: 72px 0;
+        padding: 76px 0;
       }
 
       .section-title {
@@ -443,7 +449,6 @@
   </style>
 </head>
 
-
 <body>
 
   <!-- =========================
@@ -451,9 +456,7 @@
        ========================= -->
 
   <header>
-
     <div class="container">
-
       <nav>
 
         <a href="#about">
@@ -481,16 +484,13 @@
         </a>
 
       </nav>
-
     </div>
-
   </header>
 
 
   <main>
 
     <div class="container">
-
 
       <!-- =========================
            HERO
@@ -504,31 +504,22 @@
             Hello, I'm
           </p>
 
-
           <h1>
             Jeongho Chae
           </h1>
 
-
           <div class="hero-role">
-
             Computational Biology &amp;
             Statistical Genomics
-
           </div>
-
 
           <div class="hero-info">
 
             <p>
-
               Ph.D. Student in Computational Biology,<br>
-
               School of Computer Science,
               Carnegie Mellon University
-
             </p>
-
 
             <div class="hero-email">
 
@@ -543,7 +534,6 @@
             </div>
 
           </div>
-
 
           <div class="hero-extra">
 
@@ -573,7 +563,6 @@
         <h2 class="section-title">
           #About
         </h2>
-
 
         <div class="section-body">
 
@@ -608,11 +597,9 @@
           #Education
         </h2>
 
-
         <div class="section-body">
 
           <div class="timeline">
-
 
             <div class="timeline-row">
 
@@ -627,11 +614,8 @@
                 </h3>
 
                 <p>
-
                   Ph.D. in Computational Biology<br>
-
                   School of Computer Science
-
                 </p>
 
               </div>
@@ -652,11 +636,8 @@
                 </h3>
 
                 <p>
-
                   Student Exchange Program<br>
-
                   Research Assistant, Furey Lab
-
                 </p>
 
               </div>
@@ -677,17 +658,13 @@
                 </h3>
 
                 <p>
-
                   B.S. in Life Sciences<br>
-
                   B.S. in Computer Science and Engineering
-
                 </p>
 
               </div>
 
             </div>
-
 
           </div>
 
@@ -709,16 +686,13 @@
           #Research
         </h2>
 
-
         <div class="section-body">
 
           <article class="research-item">
 
-
             <div class="research-number">
               01 / WAD
             </div>
-
 
             <h3 class="research-title">
 
@@ -728,7 +702,6 @@
 
             </h3>
 
-
             <div class="research-authors">
 
               Jeongho Chae,
@@ -737,12 +710,7 @@
 
             </div>
 
-
             <div class="research-links">
-
-              <!--
-                Replace # with your real paper URL.
-              -->
 
               <a
                 href="#"
@@ -751,11 +719,6 @@
               >
                 Paper ↗
               </a>
-
-
-              <!--
-                Replace # with your real GitHub URL.
-              -->
 
               <a
                 href="#"
@@ -766,7 +729,6 @@
               </a>
 
             </div>
-
 
           </article>
 
@@ -788,11 +750,9 @@
           #Experience
         </h2>
 
-
         <div class="section-body">
 
           <div class="timeline">
-
 
             <div class="timeline-row">
 
@@ -835,7 +795,6 @@
 
             </div>
 
-
           </div>
 
         </div>
@@ -856,11 +815,9 @@
           #Awards
         </h2>
 
-
         <div class="section-body">
 
           <div class="award-list">
-
 
             <div class="award-row">
 
@@ -887,7 +844,6 @@
 
             </div>
 
-
           </div>
 
         </div>
@@ -908,16 +864,13 @@
           #Let's Talk!
         </h2>
 
-
         <div class="section-body">
 
           <div class="contact-links">
 
-
             <a href="mailto:jchae2@cs.cmu.edu">
               jchae2@cs.cmu.edu
             </a>
-
 
             <a
               href="https://github.com/chae-jh"
@@ -927,13 +880,11 @@
               GitHub ↗
             </a>
 
-
           </div>
 
         </div>
 
       </section>
-
 
     </div>
 
@@ -964,7 +915,6 @@
       new Date().getFullYear();
 
   </script>
-
 
 </body>
 
