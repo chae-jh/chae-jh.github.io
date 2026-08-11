@@ -120,20 +120,18 @@
       line-height: 1.4;
     }
 
-    /*
-      The image is removed from the normal layout flow,
-      so it cannot affect text spacing.
-    */
     .hero-main {
-      position: relative;
       width: 100%;
 
-      padding-right: 350px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 50px;
+
+      align-items: stretch;
     }
 
     .hero-main-text {
       min-width: 0;
-      max-width: 760px;
     }
 
     .hero h1 {
@@ -197,32 +195,29 @@
        ========================= */
 
     .hero-image {
-      position: absolute;
-
-      top: 6px;
-      right: 10px;
-
-      width: 320px;
+      min-width: 0;
 
       display: flex;
+      align-items: stretch;
       justify-content: center;
-      align-items: flex-start;
 
-      pointer-events: none;
+      overflow: visible;
     }
 
     .hero-image img {
       display: block;
 
-      width: 320px;
-      height: auto;
+      height: 100%;
+      width: auto;
 
-      max-width: 100%;
+      max-width: 320px;
 
       object-fit: contain;
+      object-position: center;
 
-      transform: translateX(-18px) scale(1.18);
-      transform-origin: center top;
+      /* left 24px + up 32px + same image size */
+      transform: translate(-24px, -32px) scale(1.20);
+      transform-origin: center;
     }
 
     .hero-extra {
@@ -456,9 +451,9 @@
       }
 
       .hero-main {
-        position: static;
+        grid-template-columns: 1fr;
 
-        padding-right: 0;
+        gap: 45px;
       }
 
       .hero h1 {
@@ -482,15 +477,7 @@
       }
 
       .hero-image {
-        position: static;
-
-        width: auto;
-
-        margin-top: 45px;
-
         justify-content: flex-start;
-
-        pointer-events: auto;
       }
 
       .hero-image img {
@@ -585,6 +572,8 @@
 
           <div class="hero-main">
 
+            <!-- LEFT -->
+
             <div class="hero-main-text">
 
               <h1>
@@ -619,6 +608,9 @@
 
             </div>
 
+
+            <!-- RIGHT -->
+
             <div class="hero-image">
 
               <img
@@ -629,6 +621,9 @@
             </div>
 
           </div>
+
+
+          <!-- BELOW BOTH -->
 
           <div class="hero-extra">
 
