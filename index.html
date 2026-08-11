@@ -109,7 +109,6 @@
       padding: 70px 0;
     }
 
-    /* Only changed for image layout */
     .hero-layout {
       width: 100%;
 
@@ -147,11 +146,13 @@
     .hero-role {
       margin-top: 30px;
 
-      font-size: clamp(27px, 3.3vw, 38px);
+      font-size: clamp(24px, 2.55vw, 31px);
       line-height: 1.12;
 
       font-weight: 700;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.035em;
+
+      white-space: nowrap;
     }
 
     .hero-info {
@@ -452,7 +453,9 @@
       }
 
       .hero-role {
-        font-size: 26px;
+        font-size: 24px;
+
+        white-space: normal;
       }
 
       .hero-info p {
@@ -550,8 +553,6 @@
 
         <div class="hero-layout">
 
-          <!-- LEFT SIDE: ORIGINAL CONTENT -->
-
           <div class="hero-inner">
 
             <p class="hello">
@@ -563,8 +564,7 @@
             </h1>
 
             <div class="hero-role">
-              Computational Biology &amp;
-              Statistical Genomics
+              Computational Biology &amp; Statistical Genomics
             </div>
 
             <div class="hero-info">
@@ -608,7 +608,7 @@
           <div class="hero-image">
 
             <img
-              src="avatar.png"
+              src="avatar.png?v=3"
               alt="Jeongho Chae illustration"
             >
 
