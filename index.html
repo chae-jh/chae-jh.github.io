@@ -109,7 +109,22 @@
       padding: 70px 0;
     }
 
-    .hero-layout {
+    .hero-inner {
+      width: 100%;
+    }
+
+    .hello {
+      margin: 0 0 12px;
+
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /*
+      Jeongho Chae ~ email 영역과
+      오른쪽 사진을 같은 높이의 grid에 배치
+    */
+    .hero-main {
       width: 100%;
 
       display: grid;
@@ -119,16 +134,8 @@
       align-items: stretch;
     }
 
-    .hero-inner {
-      width: 100%;
-      max-width: 940px;
-    }
-
-    .hello {
-      margin: 0 0 12px;
-
-      font-size: 16px;
-      line-height: 1.4;
+    .hero-main-text {
+      min-width: 0;
     }
 
     .hero h1 {
@@ -187,25 +194,18 @@
       text-underline-offset: 3px;
     }
 
-    .hero-extra {
-      margin-top: 30px;
-
-      color: #444444;
-
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
     /* =========================
        HERO IMAGE
        ========================= */
 
     .hero-image {
+      min-width: 0;
+
       display: flex;
       align-items: stretch;
       justify-content: center;
 
-      min-width: 0;
+      overflow: visible;
     }
 
     .hero-image img {
@@ -214,10 +214,26 @@
       width: 100%;
       height: 100%;
 
+      max-width: 300px;
+
       object-fit: contain;
       object-position: center;
 
-      max-width: 300px;
+      /*
+        사진을 살짝 키워서
+        왼쪽 text block의 위/아래에 자연스럽게 맞춤
+      */
+      transform: scale(1.08);
+      transform-origin: center;
+    }
+
+    .hero-extra {
+      margin-top: 30px;
+
+      color: #444444;
+
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     /* =========================
@@ -441,8 +457,9 @@
         padding: 60px 0;
       }
 
-      .hero-layout {
+      .hero-main {
         grid-template-columns: 1fr;
+
         gap: 45px;
       }
 
@@ -471,9 +488,12 @@
       }
 
       .hero-image img {
-        width: 240px;
+        width: 250px;
         height: auto;
+
         max-width: 70vw;
+
+        transform: none;
       }
 
       .content {
@@ -551,66 +571,80 @@
 
       <section class="hero">
 
-        <div class="hero-layout">
+        <div class="hero-inner">
 
-          <div class="hero-inner">
+          <p class="hello">
+            Hello, I'm
+          </p>
 
-            <p class="hello">
-              Hello, I'm
-            </p>
+          <!--
+            Jeongho Chae부터 Email까지와
+            사진을 한 줄에 묶음
+          -->
 
-            <h1>
-              Jeongho Chae
-            </h1>
+          <div class="hero-main">
 
-            <div class="hero-role">
-              Computational Biology &amp; Statistical Genomics
-            </div>
+            <!-- LEFT -->
 
-            <div class="hero-info">
+            <div class="hero-main-text">
 
-              <p>
-                Ph.D. Student in Computational Biology,<br>
-                School of Computer Science,
-                Carnegie Mellon University
-              </p>
+              <h1>
+                Jeongho Chae
+              </h1>
 
-              <div class="hero-email">
+              <div class="hero-role">
+                Computational Biology &amp; Statistical Genomics
+              </div>
 
-                <span>
-                  ✉
-                </span>
+              <div class="hero-info">
 
-                <a href="mailto:jchae2@cs.cmu.edu">
-                  jchae2@cs.cmu.edu
-                </a>
+                <p>
+                  Ph.D. Student in Computational Biology,<br>
+                  School of Computer Science,
+                  Carnegie Mellon University
+                </p>
+
+                <div class="hero-email">
+
+                  <span>
+                    ✉
+                  </span>
+
+                  <a href="mailto:jchae2@cs.cmu.edu">
+                    jchae2@cs.cmu.edu
+                  </a>
+
+                </div>
 
               </div>
 
             </div>
 
-            <div class="hero-extra">
 
-              First-year Ph.D. student advised by Prof. Martin Zhang.
+            <!-- RIGHT -->
 
-              <br>
+            <div class="hero-image">
 
-              I develop statistical and computational methods
-              to understand gene regulation from genomic data.
+              <img
+                src="avatar.png?v=4"
+                alt="Jeongho Chae illustration"
+              >
 
             </div>
 
           </div>
 
 
-          <!-- RIGHT SIDE: IMAGE -->
+          <!-- BELOW BOTH -->
 
-          <div class="hero-image">
+          <div class="hero-extra">
 
-            <img
-              src="avatar.png?v=3"
-              alt="Jeongho Chae illustration"
-            >
+            First-year Ph.D. student advised by Prof. Martin Zhang.
+
+            <br>
+
+            I develop statistical and computational methods
+            to understand gene regulation from genomic data.
 
           </div>
 
