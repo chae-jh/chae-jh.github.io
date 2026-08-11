@@ -120,18 +120,20 @@
       line-height: 1.4;
     }
 
+    /*
+      The image is removed from the normal layout flow,
+      so it cannot affect text spacing.
+    */
     .hero-main {
+      position: relative;
       width: 100%;
 
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 50px;
-
-      align-items: stretch;
+      padding-right: 350px;
     }
 
     .hero-main-text {
       min-width: 0;
+      max-width: 760px;
     }
 
     .hero h1 {
@@ -195,28 +197,32 @@
        ========================= */
 
     .hero-image {
-      min-width: 0;
+      position: absolute;
+
+      top: 6px;
+      right: 10px;
+
+      width: 320px;
 
       display: flex;
-      align-items: stretch;
       justify-content: center;
+      align-items: flex-start;
 
-      overflow: visible;
+      pointer-events: none;
     }
 
     .hero-image img {
       display: block;
 
-      height: 100%;
-      width: auto;
+      width: 320px;
+      height: auto;
 
-      max-width: 320px;
+      max-width: 100%;
 
       object-fit: contain;
-      object-position: center;
 
-      transform: translateX(-24px) scale(1.20);
-      transform-origin: center;
+      transform: translateX(-18px) scale(1.18);
+      transform-origin: center top;
     }
 
     .hero-extra {
@@ -450,9 +456,9 @@
       }
 
       .hero-main {
-        grid-template-columns: 1fr;
+        position: static;
 
-        gap: 45px;
+        padding-right: 0;
       }
 
       .hero h1 {
@@ -476,7 +482,15 @@
       }
 
       .hero-image {
+        position: static;
+
+        width: auto;
+
+        margin-top: 45px;
+
         justify-content: flex-start;
+
+        pointer-events: auto;
       }
 
       .hero-image img {
@@ -571,8 +585,6 @@
 
           <div class="hero-main">
 
-            <!-- LEFT -->
-
             <div class="hero-main-text">
 
               <h1>
@@ -607,22 +619,16 @@
 
             </div>
 
-
-            <!-- RIGHT -->
-
             <div class="hero-image">
 
               <img
-                src="avatar.png?v=6"
+                src="avatar.png?v=7"
                 alt="Jeongho Chae illustration"
               >
 
             </div>
 
           </div>
-
-
-          <!-- BELOW BOTH -->
 
           <div class="hero-extra">
 
