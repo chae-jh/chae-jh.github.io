@@ -109,6 +109,17 @@
       padding: 70px 0;
     }
 
+    /* Only changed for image layout */
+    .hero-layout {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 55px;
+
+      align-items: stretch;
+    }
+
     .hero-inner {
       width: 100%;
       max-width: 940px;
@@ -182,6 +193,30 @@
 
       font-size: 16px;
       line-height: 1.6;
+    }
+
+    /* =========================
+       HERO IMAGE
+       ========================= */
+
+    .hero-image {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+
+      min-width: 0;
+    }
+
+    .hero-image img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+      object-position: center;
+
+      max-width: 300px;
     }
 
     /* =========================
@@ -405,6 +440,11 @@
         padding: 60px 0;
       }
 
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
       .hero h1 {
         font-size: clamp(58px, 16vw, 82px);
 
@@ -421,6 +461,16 @@
 
       .hero-extra {
         font-size: 15px;
+      }
+
+      .hero-image {
+        justify-content: flex-start;
+      }
+
+      .hero-image img {
+        width: 240px;
+        height: auto;
+        max-width: 70vw;
       }
 
       .content {
@@ -498,51 +548,69 @@
 
       <section class="hero">
 
-        <div class="hero-inner">
+        <div class="hero-layout">
 
-          <p class="hello">
-            Hello, I'm
-          </p>
+          <!-- LEFT SIDE: ORIGINAL CONTENT -->
 
-          <h1>
-            Jeongho Chae
-          </h1>
+          <div class="hero-inner">
 
-          <div class="hero-role">
-            Computational Biology &amp;
-            Statistical Genomics
-          </div>
-
-          <div class="hero-info">
-
-            <p>
-              Ph.D. Student in Computational Biology,<br>
-              School of Computer Science,
-              Carnegie Mellon University
+            <p class="hello">
+              Hello, I'm
             </p>
 
-            <div class="hero-email">
+            <h1>
+              Jeongho Chae
+            </h1>
 
-              <span>
-                ✉
-              </span>
+            <div class="hero-role">
+              Computational Biology &amp;
+              Statistical Genomics
+            </div>
 
-              <a href="mailto:jchae2@cs.cmu.edu">
-                jchae2@cs.cmu.edu
-              </a>
+            <div class="hero-info">
+
+              <p>
+                Ph.D. Student in Computational Biology,<br>
+                School of Computer Science,
+                Carnegie Mellon University
+              </p>
+
+              <div class="hero-email">
+
+                <span>
+                  ✉
+                </span>
+
+                <a href="mailto:jchae2@cs.cmu.edu">
+                  jchae2@cs.cmu.edu
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="hero-extra">
+
+              First-year Ph.D. student advised by Prof. Martin Zhang.
+
+              <br>
+
+              I develop statistical and computational methods
+              to understand gene regulation from genomic data.
 
             </div>
 
           </div>
 
-          <div class="hero-extra">
 
-            First-year Ph.D. student advised by Prof. Martin Zhang.
+          <!-- RIGHT SIDE: IMAGE -->
 
-            <br>
+          <div class="hero-image">
 
-            I develop statistical and computational methods
-            to understand gene regulation from genomic data.
+            <img
+              src="avatar.png"
+              alt="Jeongho Chae illustration"
+            >
 
           </div>
 
@@ -917,5 +985,4 @@
   </script>
 
 </body>
-
 </html>
